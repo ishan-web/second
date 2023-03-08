@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/40ae11a950.js" crossorigin="anonymous"></script>    <link  href="style.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Poppins:ital,wght@0,500;0,600;1,400&display=swap');
+    </style>
+    <title>Document</title>
+</head>
+<body>
+  <div class="cont">
+      <ul class="nav">
+          <p ><img src="../assets/logo.png" alt="logo" /></p>
+          <div class="sidenav">
+              <a href="#home"> <i class="fa-sharp fa-solid fa-house-chimney"></i>Home</a>
+              <button class="dropdown-btn"><i class="fa-solid fa-book-open"></i>Reports 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="#">Balance Statement</a>
+                  <a href="#">SMS Report</a>
+                </div>
+                  <a href="#sms"><i class="fa-solid fa-comment-sms"></i>Send SMS</a>
+                  <a href="#add"><i class="fa-solid fa-plus"></i>Add Balance</a>
+                  <a href="#api"><i class="fa-solid fa-link"></i>API</a>
+          </div>
+      </ul>
+    <div class="navbar">
+        <input type="text" class="text" placeholder="Type here...">
+        <a href="#"><i class="fa-solid fa-user"></i></a>
+        <a href="#">Sign In</a>
+        <a href="#"><i class="fa-solid fa-gear"></i></a>
+        <a href="#"><i class="fa-regular fa-bell"></i></a>
+    </div>
+    <div class="high-container">
+      <div class="box">
+        <p>Today's User</p>
+        <p><b>$53,000</b></p>
+        <i class="fa-solid fa-database"></i>
+        <p style="color: purple; margin-top: 10px; font-size: 1.2rem; font-weight:bold;">50% today</p>
+        <p>yesterday</p>
+      </div>
+      <div class="box">
+        <p>Today's User</p>
+        <p><b>$53,000</b></p>
+        <i class="fa-solid fa-database"></i>
+        <p style="color:blue; margin-top: 10px; font-size: 1.2rem; font-weight:bold;">50% today</p>
+        <p>yesterday</p>
+      </div>
+      <div class="box">
+        <p>Today's User</p>
+        <p><b>$53,000</b></p>
+        <i class="fa-solid fa-database"></i>
+        <p style="color:rgb(61, 204, 4); margin-top: 10px; font-size: 1.2rem; font-weight:bold;">50% today</p>
+        <p>yesterday</p>
+      </div>
+      <div class="box">
+        <p>Today's User</p>
+        <p><b>$53,000</b></p>
+        <i class="fa-solid fa-database"></i>
+        <p style="color:red; font-size: 1.1rem; margin-top: 10px; font-weight:bold;">50% today</p>
+        <p>yesterday</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="box_graph">
+        <h3>Sales overview</h3>
+        <p style="color:rgb(61, 204, 4); margin-top: 10px; font-size: 1.2rem; font-weight:bold;">50% less than 2022</p>
+      </div>
+      <div class="box_img">
+        <img src="../assets/pic.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- Team container starts -->
+    <div class="team_container">
+      <div class="members_container">
+        <h3>Team members</h3>
+        <div class="members_name">
+          <img src="../assets/mem1.jpg" alt="first">
+          <div class="name_status">
+            <p>John Michael</p>
+            <p class="status" style="background-color: red; text-align: center; border-radius: 10px;">Online</p>
+          </div>
+          <input type="button" value="Add">
+        </div>
+        <hr>
+        <div class="members_name">
+          <img src="../assets/mem1.jpg" alt="first">
+          <div class="name_status">
+            <p>John Michael</p>
+            <p class="status" style="background-color: rgb(0, 38, 255); text-align: center; border-radius: 10px;">Online</p>
+          </div>
+          <input type="button" value="Add">
+        </div>
+        <hr>
+        <div class="members_name">
+          <img src="../assets/mem1.jpg" alt="first">
+          <div class="name_status">
+            <p>John Michael</p>
+            <p class="status" style="background-color: rgb(0, 255, 55); text-align: center; border-radius: 10px;">Online</p>
+          </div>
+          <input type="button" value="Add">
+        </div>
+        <hr>
+        <div class="members_name">
+          <img src="../assets/mem1.jpg" alt="first">
+          <div class="name_status">
+            <p>John Michael</p>
+            <p class="status" style="background-color: rgb(255, 187, 0); text-align: center; border-radius: 10px;">Online</p>
+          </div>
+          <input type="button" value="Add">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>    
+
+</body>
+</html>

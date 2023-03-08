@@ -1,0 +1,207 @@
+*{
+    margin:0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+    }
+
+.cont{
+    height: 45vh;
+    background-color: rgb(73, 113, 243);
+}
+
+.nav{
+    position: fixed;
+    height: 80%;
+    width: 250px;
+    list-style: none;
+    background-color: rgb(250, 250, 250);
+    margin: 20px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+
+.sidenav{
+    margin: 20px;
+    margin-left: 10px;
+}
+.sidenav i{
+    margin:10px;
+}
+
+p img{
+    position:relative;
+    margin-top: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 200px;
+    border-bottom: 2px solid black;
+}
+
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #000000;
+  }
+
+  /* Add an active class to the active dropdown button */
+  .active {
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    margin-left: 38px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+.navbar .text{
+    margin-top: 15px;
+    margin-left: 148vh;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
+    padding: 2.5px;
+}
+.navbar a:hover{
+  font-size: 1.2rem;
+}
+.navbar a i{
+    margin: 5px;
+}
+.navbar i{
+    color: white;
+}
+.high-container{
+  display: flex;
+  margin-left: 280px;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 220px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.box p{
+  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Poppins', sans-serif;
+}
+.box i{
+  position: absolute;
+  margin-left: 170px;
+}
+
+.container{
+  margin-left:280px;
+  display: flex;
+  height: 60vh;
+}
+
+.container .box_graph{
+  background-color: rgb(70, 71, 71);
+  height: 350px;
+  width: 600px;
+  margin: 5px;
+  border-radius: 20px;
+  padding: 20px;
+ 
+}
+
+.container .box_img {
+  height: 350px;
+  width: 410px;
+  }
+.box_img img{
+  height: 390px;
+  width: 400px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.team_container{
+  display: flex;
+  margin-top: 10px;
+  margin-left:280px;
+}
+.members_container{
+  height: 400px;
+  width: 310px;
+  border-radius: 20px;
+  background-color: aqua;
+  padding: 10px;
+}
+.members_name{
+  display: flex;
+  margin: 15px 0;
+
+}
+.members_name img{
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  margin: 0 20px;
+}
+.name_status p{
+  margin: 5px 10px;
+  align-items: center;
+}
+.members_name input{
+  height: 35px;
+  color:  rgb(73, 113, 243);
+  background-color: white;
+  border-color: rgb(73, 113, 243);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left:30px;
+  padding: 5px 10px 5px 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Poppins', sans-serif;
+  
+
+}
+
+.members_name input:hover{
+  transition-duration: 500ms;
+   padding: 10px;
+   cursor: pointer;
+}
