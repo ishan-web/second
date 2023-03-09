@@ -7,6 +7,7 @@
 .cont{
     height: 45vh;
     background-color: rgb(73, 113, 243);
+    z-index: -1;
 }
 
 .nav{
@@ -86,12 +87,22 @@ p img{
 
 .navbar .text{
     margin-top: 15px;
-    margin-left: 148vh;
+    margin-left: 140vh;
     height: 40px;
     width: 200px;
     border-radius: 10px;
     border: none;
-    padding: 10px;
+    padding: 10px;  
+    outline: none;
+
+  }
+.navber .text:focus,
+.navbar .text:valid{
+  color:rgb(0, 0, 0);
+  transform: translate(10px) translate(-7px);
+  padding: 0 10px;
+  
+
 }
 .navbar a{
     text-decoration: none;
@@ -100,10 +111,10 @@ p img{
     padding: 2.5px;
 }
 .navbar a:hover{
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 .navbar a i{
-    margin: 5px;
+    margin: 8px;
 }
 .navbar i{
     color: white;
@@ -151,11 +162,26 @@ p img{
   height: 350px;
   width: 410px;
   }
+.inside_text h3 {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  margin: 230px 100px;
+  }
+
+  .inside_text p{
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    margin: 270px 50px;
+
+  }
 .box_img img{
   height: 390px;
   width: 400px;
   border-radius: 20px;
   margin: 5px;
+  position: absolute;
 }
 
 .team_container{
@@ -167,7 +193,7 @@ p img{
   height: 400px;
   width: 310px;
   border-radius: 20px;
-  background-color: aqua;
+  background-color: rgb(119, 126, 126);
   padding: 10px;
 }
 .members_name{
@@ -204,4 +230,57 @@ p img{
   transition-duration: 500ms;
    padding: 10px;
    cursor: pointer;
+}
+.list{
+  height: 400px;
+  width: 320px;
+  background-color: #818181;
+  border-radius: 20px;
+  margin: 0 10px;
+  padding: 10px;
+}
+.list_cont{
+  display: flex;
+}
+.list_column{
+  margin: 14px;
+}
+.list_column p{
+  margin: 6px;
+}
+
+.list_cont .body{
+  margin-left: 100px;
+}
+.checkboxOverride {
+  margin: 30px 10px;
+  position: relative;
+  width: 25px;
+}
+.checkboxOverride input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+.checkboxOverride label {
+  background: none repeat scroll 0 0 #EEEEEE;
+  border: 1px solid #DDDDDD;
+  cursor: pointer;
+  height: 25px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 25px;
+  border-radius: 5px;
+}
+.checkboxOverride label:after {
+  border-style: none none solid solid;
+  content: "";
+  height: 5px;
+  left: 6px;
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  -ms-transform:rotate(-45deg); /* IE 9 */
+  -webkit-transform:rotate(-45deg); /* Safari and Chrome */
+  transform:rotate(-45deg);
+  width: 10px;
 }
