@@ -187,11 +187,11 @@ p img{
 .team_container{
   display: flex;
   margin-top: 10px;
-  margin-left:280px;
+  margin-left:285px;
 }
 .members_container{
   height: 400px;
-  width: 310px;
+  width: 328px;
   border-radius: 20px;
   background-color: rgb(119, 126, 126);
   padding: 10px;
@@ -283,4 +283,25 @@ p img{
   -webkit-transform:rotate(-45deg); /* Safari and Chrome */
   transform:rotate(-45deg);
   width: 10px;
+}
+.progress{
+  height: 400px;
+  width: 320px;
+  border-radius: 20px;
+  background-color: rgb(119, 126, 126);
+  padding: 10px;
+}
+.progress_track{
+  display: flex;
+  margin: 22px
+}
+.progress_status{
+  flex-direction: column;
+  margin-left: 60px;
+}
+.progress_track img{
+  height: 50px;
+  width: 60px;
+  border-radius: 20px;
+  margin: 0 20px;
 }

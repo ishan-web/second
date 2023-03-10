@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+}
+.cont{
+    height: 45vh;
+    background-color: rgb(73, 113, 243);
+
+}
+
+.nav{
+    position: fixed;
+    height: 80%;
+    width: 250px;
+    list-style: none;
+    background-color: rgb(250, 250, 250);
+    margin: 20px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+
+.sidenav{
+    margin: 20px;
+    margin-left: 10px;
+}
+.sidenav i{
+    margin:10px;
+}
+
+p img{
+    position:relative;
+    margin-top: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 200px;
+    border-bottom: 2px solid black;
+}
+
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #000000;
+  }
+
+  /* Add an active class to the active dropdown button */
+  .active {
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    margin-left: 38px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }

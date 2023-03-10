@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="api.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40ae11a950.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+
+    <div class="cont">
+        <div class="nav">
+            <p ><img src="../assets/logo.png" alt="logo" /></p>
+            <div class="sidenav">
+                <a href="../../dashboard/index.html"> <i class="fa-sharp fa-solid fa-house-chimney"></i>Home</a>
+                <button class="dropdown-btn"><i class="fa-solid fa-book-open"></i>Reports 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../statement/Statement.html">Balance Statement</a>
+                    <a href="../Reports/Transaction/Transaction.html">SMS Report</a>
+                  </div>
+                    <a href="#sms"><i class="fa-solid fa-comment-sms"></i>Send SMS</a>
+                    <a href="#add"><i class="fa-solid fa-plus"></i>Add Balance</a>
+                    <a href="#api"><i class="fa-solid fa-link"></i>API</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>  
+</body>
+</html>

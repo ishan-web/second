@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="transaction.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40ae11a950.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+
+    <div class="cont">
+        <div class="nav">
+            <p ><img src="../../assets/logo.png" alt="logo" /></p>
+            <div class="sidenav">
+                <a href="../../dashboard/index.html"> <i class="fa-sharp fa-solid fa-house-chimney"></i>Home</a>
+                <button class="dropdown-btn"><i class="fa-solid fa-book-open"></i>Reports 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="../statement/Statement.html">Balance Statement</a>
+                    <a href="#">SMS Report</a>
+                  </div>
+                    <a href="#sms"><i class="fa-solid fa-comment-sms"></i>Send SMS</a>
+                    <a href="#add"><i class="fa-solid fa-plus"></i>Add Balance</a>
+                    <a href="#api"><i class="fa-solid fa-link"></i>API</a>
+            </div>
+        </div>
+        <div class="date">
+            <h2>SMS Tansaction Report</h2>
+            <div class="operator_name">
+                <label for="operator">Operator name</label>
+                <select class="select" name="language" id="language">
+                    <option value="All">All</option>
+                    <option value="Nepal Telecom">Nepal Telecom</option>
+                    <option value="Ncell" >Ncell</option>
+                    <option value="Smart Cell" selected>Smart Cell</option>
+                    <option value="United Kingdom" selected>United Knigdom</option>
+                </select>
+            </div>
+            <div class="operator_name">
+                <label for="operator">Transaction status</label>
+                <select class="select" name="language" id="language">
+                    <option value="All">All</option>
+                    <option value="Nepal Telecom">Cancelled</option>
+                    <option value="Ncell" >Failed</option>
+                    <option value="Ncell" >Hold</option>
+                    <option value="Smart Cell" selected>Processing </option>
+                    <option value="United Kingdom" selected>Success</option>
+                </select>
+            </div>
+            <div class="date_from">
+                <label for="dateofbirth">From:</label>
+                <input type="date" class="calender" name="dateofbirth" id="dateofbirth">
+            </div>    
+            <div class="date_to">
+                <label for="dateofbirth">To:</label>
+                <input type="date" class="calender" name="dateofbirth" id="dateofbirth">
+            </div> 
+            <div class="btn">
+              <input type="submit" class="submit" value="Submit" onclick="openTable()">
+              <input type="submit" class="submit" value="Export">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div  class="overflow" style="overflow-x: auto;">
+            <table id="myTable" style="display:none">
+                <tr>
+                  <th>S.N</th>
+                  <th>ID</th>
+                  <th>User</th>
+                  <th>Operator</th>
+                  <th>Senderld</th>
+                  <th>Mobile No.</th>
+                  <th>Message</th>
+                  <th>SMS Count</th>
+                  <th>Date</th>
+                  <th>Agent Amount</th>
+                  <th>Status</th>
+                  <th>Message</th>
+                </tr>
+                <tr>
+                  <td>Jill</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                  <td>50</td>
+                  <td>50</td>
+                  <td>50</td>
+                  <td>50</td>
+                  <td>50</td>
+                  <td>50</td>
+                  <td>50</td>
+                  <td>50</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Jackson</td>
+                  <td>94</td>
+                  <td>94</td>
+                  <td>94</td>
+                  <td>94</td>
+                  <td>94</td>
+                  <td>94</td>
+                  <td>94</td>
+                  <td>94</td>
+                  <td>94</td>
+                  <td>94</td>
+                </tr>
+                <tr>
+                  <td>Adam</td>
+                  <td>Johnson</td>
+                  <td>67</td>
+                  <td>67</td>
+                  <td>67</td>
+                  <td>67</td>
+                  <td>67</td>
+                  <td>67</td>
+                  <td>67</td>
+                  <td>67</td>
+                  <td>67</td>
+                  <td>67</td>
+                </tr>
+              </table>
+
+    </div>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have mdivtiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>  
+        <script>
+            function openTable() {
+                var table = document.getElementById("myTable");
+                if (table.style.display === "table") {
+                    table.style.display = "none";
+                } else {
+                    table.style.display = "table";
+                }
+                }
+        </script>
+</body>
+</html>

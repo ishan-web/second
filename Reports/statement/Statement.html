@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="statement.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40ae11a950.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+
+    <div class="cont">
+        <div class="nav">
+            <p ><img src="../../assets/logo.png" alt="logo" /></p>
+            <div class="sidenav">
+                <a href="../../dashboard/index.html"> <i class="fa-sharp fa-solid fa-house-chimney"></i>Home</a>
+                <button class="dropdown-btn"><i class="fa-solid fa-book-open"></i>Reports 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">Balance Statement</a>
+                    <a href="../Transaction/Transaction.html">SMS Report</a>
+                  </div>
+                    <a href="../../Sms/Sms.html"><i class="fa-solid fa-comment-sms"></i>Send SMS</a>
+                    <a href="#add"><i class="fa-solid fa-plus"></i>Add Balance</a>
+                    <a href="#api"><i class="fa-solid fa-link"></i>API</a>
+            </div>
+        </div>
+        <div class="date">
+            <h2>Client Statement Report</h2>
+            <div class="date_from">
+                <label for="dateofbirth">From:</label>
+                <input type="date" name="dateofbirth" id="dateofbirth">
+            </div>    
+            <div class="date_to">
+                <label for="dateofbirth">To:</label>
+                <input type="date" name="dateofbirth" id="dateofbirth">
+            </div> 
+
+            <label class="container">Summary Report
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">Detail Report
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <input type="submit" class="submit" value="Submit" onclick="openTable()">
+            </div>
+        </div>
+    </div>
+    <div  class="overflow" style="overflow-x: auto;">
+        <table id="myTable" style="display:none">
+            <tr>
+              <th>S.N</th>
+              <th>Date</th>
+              <th>Particular</th>
+              <th>Debit Amount</th>
+              <th>Credit Amount</th>
+              <th>Commission</th>
+              <th>Settlement Amount</th>
+              <th>Balance Amount</th>
+            </tr>
+            <tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+              <td>50</td>
+              <td>50</td>
+              <td>50</td>
+              <td>50</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+              <td>94</td>
+              <td>94</td>
+              <td>94</td>
+              <td>94</td>
+              <td>94</td>
+            </tr>
+            <tr>
+              <td>Adam</td>
+              <td>Johnson</td>
+              <td>67</td>
+              <td>67</td>
+              <td>67</td>
+              <td>67</td>
+              <td>67</td>
+              <td>67</td>
+            </tr>
+          </table>
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have mdivtiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>  
+                <script>
+                    function openTable() {
+                        var table = document.getElementById("myTable");
+                        if (table.style.display === "table") {
+                            table.style.display = "none";
+                        } else {
+                            table.style.display = "table";
+                        }
+                        }
+                </script>
+</body>
+</html>

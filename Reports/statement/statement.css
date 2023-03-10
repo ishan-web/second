@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+}
+.cont{
+    height: 45vh;
+    background-color: rgb(73, 113, 243);
+
+}
+
+.nav{
+    position: fixed;
+    height: 80%;
+    width: 250px;
+    list-style: none;
+    background-color: rgb(250, 250, 250);
+    margin: 20px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+
+.sidenav{
+    margin: 20px;
+    margin-left: 10px;
+}
+.sidenav i{
+    margin:10px;
+}
+
+p img{
+    position:relative;
+    margin-top: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 200px;
+    border-bottom: 2px solid black;
+}
+
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #000000;
+  }
+
+  /* Add an active class to the active dropdown button */
+  .active {
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    margin-left: 38px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+
+.date{
+    position: absolute;
+    margin: 50px 50px 100px 400px;
+    height: 300px;
+    width: 100vh;
+    border-radius: 20px;
+    background-color: rgb(229, 230, 240);
+
+  }
+  .date h2{
+    height:30px;
+    width:97vh;
+    background-color: #3651e7;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+  }
+.date_from{
+    position: absolute;
+    display: flex;
+    margin: 20px 0px 0px 100px;
+}
+label{
+    margin: 3px 10px;
+}
+
+.date_to{
+    display: flex;
+    margin: 20px 0px 0px 360px;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin:  20px 0px 0px 260px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #b1adad;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #636161;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+.submit{
+    height: 35px;
+    color:  rgb(73, 113, 243);
+    background-color: white;
+    border-color: rgb(73, 113, 243);
+    border-radius: 10px;
+    margin: 50px 10px 10px 250px;
+    padding: 5px 10px 5px 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+}
+.submit:hover{
+    transition-duration: 500ms;
+    color:#fff;
+    background-color: rgb(73, 113, 243) ;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  /* custom styles */
+
+  label {
+    display: block;
+  }
+  input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 190px;
+  }
+  #myTable{
+    margin:80px 10px 10px 0px;
+  }
+  table, th, td {
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 5px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  .overflow{
+    height: 300px;
+    margin-left: 280px;
+    margin-top: 20px;
+  }
