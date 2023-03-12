@@ -74,3 +74,91 @@ p img{
     float: right;
     padding-right: 8px;
   }
+
+  .container{
+    position: absolute;
+    margin: 50px 50px 100px 330px;
+    height: 162vh;
+    width: 990px;
+    border-radius: 20px;
+    background-color: rgb(229, 230, 240);
+  }
+  .container h2{
+    height:30px;
+    width:970px;
+    background-color: #3651e7;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .payment{
+    padding: 10px;
+    border-color: #818181;
+  }
+  legend{
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial
+  }
+
+  .credit{
+    display: flex;
+    width: 940px;
+  }
+  .image{
+    margin:0px 8px;
+  }
+  .container a{
+    display: block;
+    margin: 10px;
+  }
+
+  .container img{
+    height: 70px;
+    width: 80px;
+    border-radius: 20px;
+    margin: 10px 10px;
+  }
+  .container img:hover{
+    transition: box-shadow 300ms ease-in-out;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+  }
+  #myContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  #myContainer .number{
+    height: 35px;
+    width: 260px;
+    color:  grey;
+    background-color: white;
+    border-color: grey;
+    margin: 10px;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+  }
+  .submit{
+    height: 35px;
+    width: 100px;
+    color:  rgb(73, 113, 243);
+    background-color: white;
+    border-color: rgb(73, 113, 243);
+    border-radius: 10px;
+    margin: 15px 10px 10px 90px;
+    padding: 5px 10px 5px 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+}
+.submit:hover{
+  transition-duration: 500ms;
+  color:#fff;
+  background-color: rgb(73, 113, 243) ;
+  font-size: 15px;
+  cursor: pointer;
+
+}
