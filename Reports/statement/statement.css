@@ -94,20 +94,21 @@ p img{
     text-align: center;
     border-radius: 20px 20px 0px 0px;
   }
-.date_from{
-    position: absolute;
-    display: flex;
-    margin: 20px 0px 0px 100px;
+.date_form{
+    position:relative;
 }
 label{
     margin: 3px 10px;
+    font-size: 1.3rem;
+    margin: 5px 10px 0 320px;
+}
+.date_form input{
+  height: 40px;
+  width: 180px;
+  margin: 5px 10px 0 250px;
 }
 
-.date_to{
-    display: flex;
-    margin: 20px 0px 0px 360px;
-}
-.container {
+/* .container {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -121,16 +122,16 @@ label{
 
   
   /* Hide the browser's default radio button */
-  .container input {
+  /* .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
+  } */
   
   /* Create a custom radio button */
-  .checkmark {
+  /* .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -138,46 +139,77 @@ label{
     width: 25px;
     background-color: #b1adad;
     border-radius: 50%;
-  }
+  } */
   
   /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
+  /* .container:hover input ~ .checkmark {
     background-color: #636161;
-  }
+  } */
   
   /* When the radio button is checked, add a blue background */
-  .container input:checked ~ .checkmark {
+  /* .container input:checked ~ .checkmark {
     background-color: #2196F3;
-  }
+  } */
   
   /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
+  /* .checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
+  } */
   
   /* Show the indicator (dot/circle) when checked */
-  .container input:checked ~ .checkmark:after {
+  /* .container input:checked ~ .checkmark:after {
     display: block;
-  }
+  } */
   
   /* Style the indicator (dot/circle) */
-  .container .checkmark:after {
+  /* .container .checkmark:after {
     top: 9px;
     left: 9px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background: white;
+  }  */
+
+
+  form label{
+    margin-top: 30px;
+    margin: 15px 10px 0 280px;
+    font-size: 1.3rem;
   }
+  .credit{
+    display: flex;
+    gap: 20px;
+  }
+
+.search{
+  height: 35px;
+  width: 260px;
+  color:  rgb(73, 113, 243);
+  background-color: white;
+  border-color: rgb(73, 113, 243);
+  border-radius: 10px;
+  margin: 5px 10px 0 210px;
+  padding: 5px 10px 5px 30px;
+  outline: none;
+  font-size: 1.2rem;
+  
+}
+
+.search:focus{
+  transition: 300ms ease-in-out;
+  box-shadow: 1px 1px 5px 0 rgba(27, 14, 207, 0.5); 
+}
+
 .submit{
     height: 35px;
     color:  rgb(73, 113, 243);
     background-color: white;
     border-color: rgb(73, 113, 243);
     border-radius: 10px;
-    margin: 50px 10px 10px 250px;
+    margin: 30px 10px 10px 250px;
     padding: 5px 10px 5px 10px;
     font-family: 'IBM Plex Mono', monospace;
     font-family: 'Poppins', sans-serif;
@@ -216,9 +248,9 @@ label{
   #myTable{
     margin:80px 10px 10px 0px;
   }
-  table, th, td {
+  table {
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
     
   }
   th, td {
@@ -226,10 +258,11 @@ label{
     text-align: left;
     padding: 5px;
   }
+
   
   tr:nth-child(even) {background-color: #f2f2f2;}
   .overflow{
     height: 300px;
-    margin-left: 280px;
+    margin-left: 300px;
     margin-top: 20px;
   }

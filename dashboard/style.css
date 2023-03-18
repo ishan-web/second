@@ -83,11 +83,13 @@ p img{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-
+.navbar{
+  display: flex;
+}
 
 .navbar .text{
     margin-top: 15px;
-    margin-left: 140vh;
+    margin-left: 980px;
     height: 40px;
     width: 200px;
     border-radius: 10px;
@@ -96,28 +98,59 @@ p img{
     outline: none;
 
   }
-.navber .text:focus,
-.navbar .text:valid{
-  color:rgb(0, 0, 0);
-  transform: translate(10px) translate(-7px);
-  padding: 0 10px;
-  
 
-}
 .navbar a{
+    display: block;
     text-decoration: none;
     font-size: 1.1rem;
     color: white;
     padding: 2.5px;
+    margin-top: 12px;
 }
-.navbar a:hover{
-  font-size: 1.15rem;
+.navbar a:hover, .navbar i:hover{
+  font-size: 1.25rem;
 }
 .navbar a i{
     margin: 8px;
 }
+.navbar button{
+  margin: 10px;
+  display: block;
+  border: none;
+  background: none;
+}
+.navbar .dropdown-content{
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-cont {
+  display: none;
+  position: absolute;
+  margin: 50px 1180px;
+  min-width: 160px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 10px 8px 16px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-cont a{
+  float: none;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-weight: 100;
+}
+.dropdown-cont a:hover {
+  background-color: #ddd;
+}
+
+
 .navbar i{
     color: white;
+    font-size: 1.2rem;
+    margin: 10px;
 }
 .high-container{
   display: flex;
@@ -132,6 +165,10 @@ p img{
   margin: 20px;
   border-radius: 20px;
   padding: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.box:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* new box shadow on hover */
 }
 .box p{
   font-family: 'IBM Plex Mono', monospace;
@@ -149,7 +186,7 @@ p img{
 }
 
 .container .box_graph{
-  background-color: rgb(70, 71, 71);
+  background-color: rgb(238, 238, 238);
   height: 350px;
   width: 600px;
   margin: 5px;
@@ -176,6 +213,22 @@ p img{
     margin: 270px 50px;
 
   }
+  .active {
+    background-color: #717171;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
 .box_img img{
   height: 390px;
   width: 400px;
@@ -193,7 +246,7 @@ p img{
   height: 400px;
   width: 328px;
   border-radius: 20px;
-  background-color: rgb(119, 126, 126);
+  background-color: rgb(223, 223, 223);
   padding: 10px;
 }
 .members_name{
@@ -234,7 +287,7 @@ p img{
 .list{
   height: 400px;
   width: 320px;
-  background-color: #818181;
+  background-color: #d6d1d1;
   border-radius: 20px;
   margin: 0 10px;
   padding: 10px;
@@ -288,7 +341,7 @@ p img{
   height: 400px;
   width: 320px;
   border-radius: 20px;
-  background-color: rgb(119, 126, 126);
+  background-color: rgb(192, 192, 192);
   padding: 10px;
 }
 .progress_track{

@@ -22,74 +22,70 @@
                     <a href="../Transaction/Transaction.html">SMS Report</a>
                   </div>
                     <a href="../../Sms/Sms.html"><i class="fa-solid fa-comment-sms"></i>Send SMS</a>
-                    <a href="#add"><i class="fa-solid fa-plus"></i>Add Balance</a>
-                    <a href="#api"><i class="fa-solid fa-link"></i>API</a>
+                    <a href="../../AddBalance/AddBalance.html"><i class="fa-solid fa-plus"></i>Add Balance</a>
+                    <a href="../../api/Api.html"><i class="fa-solid fa-link"></i>API</a>
             </div>
         </div>
         <div class="date">
             <h2>Client Statement Report</h2>
-            <div class="date_from">
-                <label for="dateofbirth">From:</label>
-                <input type="date" name="dateofbirth" id="dateofbirth">
+            <div class="date_form">
+                <label for="dateofbirth">Date :</label>
+                <input type="date" name="dateofbirth" id="dateofbirth" required>
             </div>    
-            <div class="date_to">
-                <label for="dateofbirth">To:</label>
-                <input type="date" name="dateofbirth" id="dateofbirth">
-            </div> 
-
-            <label class="container">Summary Report
-                <input type="radio" checked="checked" name="radio">
-                <span class="checkmark"></span>
-              </label>
-              <label class="container">Detail Report
-                <input type="radio" name="radio">
-                <span class="checkmark"></span>
-              </label>
-              <input type="submit" class="submit" value="Submit" onclick="openTable()">
+            
+            <div>
+              <form id="myForm">
+                <label for="name">Phone Number :</label>
+                <input type="tel" class="search" id="name" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required title="Please enter a 10-digit mobile number">
+              
+                <input type="submit" class="submit" value="Submit" >
+              </form>
             </div>
+          </div>
         </div>
     </div>
     <div  class="overflow" style="overflow-x: auto;">
         <table id="myTable" style="display:none">
+          
             <tr>
-              <th>S.N</th>
-              <th>Date</th>
-              <th>Particular</th>
-              <th>Debit Amount</th>
-              <th>Credit Amount</th>
-              <th>Commission</th>
-              <th>Settlement Amount</th>
-              <th>Balance Amount</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Remarks</th>
+              
             </tr>
             <tr>
-              <td>Jill</td>
-              <td>Smith</td>
-              <td>50</td>
-              <td>50</td>
-              <td>50</td>
-              <td>50</td>
-              <td>50</td>
-              <td>50</td>
+              <td style="color:rgb(16, 214, 132); font-weight: bold;" >5000</td>
+              <td>
+                <div class="credit">
+                  <p style="color:green;">Credited</p>
+                  <p>From Ravi Lammichhane from Prabhu bank</p>
+                </div>
+              </td>
+              <th>Bato Kharcha</th>
+              
             </tr>
             <tr>
-              <td>Eve</td>
-              <td>Jackson</td>
-              <td>94</td>
-              <td>94</td>
-              <td>94</td>
-              <td>94</td>
-              <td>94</td>
-              <td>94</td>
-            </tr>
+              
+              <td style="color:rgb(214, 16, 49);  font-weight: bold;">100</td>
+              <td> 
+                <div class="credit">
+                  <p style="color:rgb(221, 7, 7);">Debited</p>
+                  <p>Recharge topup</p>
+                </div>
+              </td>
+              <th>self</th>
+              
             <tr>
-              <td>Adam</td>
-              <td>Johnson</td>
-              <td>67</td>
-              <td>67</td>
-              <td>67</td>
-              <td>67</td>
-              <td>67</td>
-              <td>67</td>
+              
+              <td style="color:rgb(214, 16, 49);  font-weight: bold;">80,000</td>
+              <td>
+                <div class="credit">
+                  <p style="color:rgb(221, 7, 7);">Debited</p>
+                  <p>To prachanda Citizen bank</p>
+                </div>
+              </td>
+              <th>Second hand bike</th>
+              
             </tr>
           </table>
     <script>
@@ -109,15 +105,24 @@
           });
         }
         </script>  
-                <script>
-                    function openTable() {
-                        var table = document.getElementById("myTable");
-                        if (table.style.display === "table") {
-                            table.style.display = "none";
-                        } else {
-                            table.style.display = "table";
-                        }
-                        }
-                </script>
+
+        <script>
+            const form = document.querySelector('#myForm');
+            const table = document.querySelector('#myTable');
+
+            form.addEventListener('submit', function(event) {
+              event.preventDefault(); // prevent form submission
+
+              // Get form values
+              const name = document.querySelector('#name').value;
+              // Add table row with form values
+              const tableBody = table.querySelector('tbody');
+              const newRow = tableBody.insertRow();
+
+              // Show the table
+              table.style.display = 'table';
+            });
+
+        </script>
 </body>
 </html>

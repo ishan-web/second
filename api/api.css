@@ -1,10 +1,10 @@
 *{
     margin: 0;
-    font-family: 'IBM Plex Mono', monospace;
     font-family: 'Poppins', sans-serif;
 }
 .cont{
     height: 45vh;
+    width: 1500px;
     background-color: rgb(73, 113, 243);
 
 }
@@ -74,3 +74,184 @@ p img{
     float: right;
     padding-right: 8px;
   }
+  .api{
+    display: flex;
+  }
+
+  .api_first{
+    display: block;
+    margin: 20px 5px 10px 280px;
+    height: 680px;
+    width: 700px;
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248);
+    padding: 20px;
+  }
+  .api_header{
+    margin: 10px 0px;
+  }
+  p{
+    font-weight: 300;
+  }
+
+  .api_second{
+    display: block;
+    position: relative;
+    margin: 20px 10px 10px 10px;
+    height: 650px;
+    width: 1300px;
+    background-color: rgb(242, 242, 245);
+    padding: 20px;
+    overflow-y: scroll;
+  }
+  .get, .post{
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .post{
+    position: relative;
+    display: block;
+  }
+
+  .fixed{
+    display: flex;
+    background-color: #d1cfcf;
+    padding: 10px;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  .fixed p{
+    margin-left: 450px ;
+    margin-right: 10px;
+  }
+  .dropdown{
+    border: none;
+    width:700px;
+    padding: 10px;
+    display: block;
+  }
+  .dropdown:hover{
+    background-color: #c7c6c6;
+  }
+  .dropdown i{
+    margin: 0px 10px 10px 620px;
+  }
+  .dropdown-button{
+    display: flex;
+    width:700px;
+    padding: 10px;
+  }
+  .dropdown-button i{
+    margin-left: 326px;
+  }
+
+  .dropdown-button label{
+    background-color: blue;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: white;
+    margin-right: 20px;
+  }
+  .dropdown-button p{
+    margin: 10px;
+  }
+  .dropdown-contnr{
+    min-width: 160px;
+    background-color: #f9f9f9;
+    border: 3px soild black;
+  }
+
+  .dropdown-cont{
+    display: none;
+    width:700px;
+    background-color: #f9f9f9;
+    border: 3px soild black;
+    
+  }
+
+  .cont_head{
+    display: flex;
+    margin:10px 10px;
+  }
+  .cont_head button{
+    margin-left: 460px;
+    height: 35px;
+    width: 100px;
+    color:  rgb(0, 1, 5);
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .cont_head button:hover{
+    transition-duration: 500ms;
+    color:#2c2c2c;
+    box-shadow: 10px 8px 16px 10px rgba(0,0,0,0.2);
+
+  }
+
+  .dropdown-cont .dropdown-button i{
+    margin-left: 320px;
+  }
+
+  .api_token{
+    display: flex;
+  }
+#apiToken{
+  height: 40px;
+  width: 300px;
+  background-color: #d1cfcf;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+  margin: 10px 0;
+  border: none;
+}
+.api_token button{
+  padding: 11px;
+  margin: 10px 0;
+  background-color: #d1cfcf;
+  border-radius: 0 10px 10px 0;
+  outline: none;
+  width: 70px;
+  border: none;
+}
+.api_token button:hover{
+  background-color: #c7c6c6;
+}
+.required{
+    display: flex;
+    width:680px;
+    padding: 10px;
+    border: 3px soild black;
+    background-color: #dde3e6;
+    }
+.dropdown-contnr .dropdown-cont {
+  flex-direction: column;
+}
+.dropdown-contnr .dropdown-cont td input{
+  height: 40px;
+  width: 300px;
+  background-color: #ffffff;
+  outline: none;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 30px;
+  border: none;
+}
+.buttom_head{
+  margin: 20px 20px;
+}
+.buttom_desc{
+    width:680px;
+    padding: 10px;
+    border: 3px soild black;
+    background-color: #dde3e6;
+}
+.post .dropdown-button label{
+  background-color: green;
+
+}

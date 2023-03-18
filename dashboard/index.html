@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/40ae11a950.js" crossorigin="anonymous"></script>  
     <link  href="style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Poppins:ital,wght@0,500;0,600;1,400&display=swap');
     </style>
@@ -30,10 +31,15 @@
       </ul>
     <div class="navbar">
         <input type="text" class="text" placeholder="Type here...">
-        <a href="#"><i class="fa-solid fa-user"></i></a>
+        <button class="dropdown-button" >
+          <i class="fa-solid fa-user"></i>
+        </button>
+          <div class="dropdown-cont" >
+            <a href="../Profile/viewProfile.html">User Profile</a>
+            <a href="../Profile/Password.html">Change Password</a>
+          </div>
+        <!-- <a href="../Profile/Profile.html"><i class="fa-solid fa-user"></i></a -->
         <a href="../Signing/Signing.html">Sign In</a>
-        <a href="#"><i class="fa-solid fa-gear"></i></a>
-        <a href="#"><i class="fa-regular fa-bell"></i></a>
     </div>
     <div class="high-container">
       <div class="box">
@@ -67,14 +73,31 @@
     </div>
     <div class="container">
       <div class="box_graph">
-        <h3>Sales overview</h3>
-        <p style="color:rgb(61, 204, 4); margin-top: 10px; font-size: 1.2rem; font-weight:bold;">50% less than 2022</p>
+        <div class="graph_text" style="z-index:2">
+          <h3>Sales overview</h3>
+          <p style="color:rgb(61, 204, 4); margin-top: 10px; font-size: 1.2rem; font-weight:bold;">50% less than 2022</p>
+        </div>
+      <div class="graph_content">
+        <canvas id="myChart" style="width:100%; height: 300px; z-index: 1; max-width:700px"></canvas>
+      </div>
+       
       </div>
       <div class="box_img">
-        <img src="../assets/pic.jpg" alt="">
-        <div class="inside_text">
-          <h3>This is mushrooom</h3>
-          <p>Something random is written here</p>
+        <h2 style="position: absolute; z-index: 1; color:white; margin: 30px 160px">Sliding</h2>
+        <p style="position: absolute; z-index: 1;  color:white; margin: 80px 40px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="mySlides fade" >
+          <img src="../assets/pic.jpg" >
+        </div>
+        <div class="mySlides fade">
+          <img src="../assets/about1.jpg">
+        </div>
+        <div class="mySlides fade">
+          <img src="../assets/bg.jpg">
+        </div>
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
         </div>
       </div>
     </div>
@@ -131,8 +154,7 @@
           </div>
           <div class="body">
             <div class="checkboxOverride">
-                  <input type="checkbox" name="" id="checkboxInputOverride" value="1">
-                  <label for="checkboxInputOverride"></label>
+              <input type="radio"  name="radio" style="height: 30px; width: 20px;">
           </div>
           </div>         
         </div>
@@ -145,8 +167,7 @@
           </div>
           <div class="body">
             <div class="checkboxOverride">
-                  <input type="checkbox" name="" id="checkboxInputOverride" value="1">
-                  <label for="checkboxInputOverride"></label>
+              <input type="radio"  name="radio" style="height: 30px; width: 20px;">
           </div>
           </div>         
         </div>
@@ -158,8 +179,7 @@
           </div>
           <div class="body">
             <div class="checkboxOverride">
-                  <input type="checkbox" name="" id="checkboxInputOverride" value="1">
-                  <label for="checkboxInputOverride"></label>
+              <input type="radio"  name="radio" style="height: 30px; width: 20px;">
           </div>
           </div>         
         </div>
@@ -171,8 +191,7 @@
           </div>
           <div class="body">
             <div class="checkboxOverride">
-                  <input type="checkbox" name="" id="checkboxInputOverride" value="1">
-                  <label for="checkboxInputOverride"></label>
+              <input type="radio"  name="radio" style="height: 30px; width: 20px;" >
           </div>
           </div>         
         </div>
@@ -231,7 +250,79 @@
             }
           });
         }
-        </script>    
+        </script> 
+        <script>
+          let slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+          }
+          </script>  
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-button");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+      </script>  
+      <script>
+        var xyValues = [
+          {x:50, y:7},
+          {x:60, y:8},
+          {x:70, y:8},
+          {x:80, y:9},
+          {x:90, y:9},
+          {x:100, y:9},
+          {x:110, y:10},
+          {x:120, y:11},
+          {x:130, y:14},
+          {x:140, y:14},
+          {x:150, y:15}
+        ];
+        
+        new Chart("myChart", {
+          type: "scatter",
+          data: {
+            datasets: [{
+              pointRadius: 4,
+              pointBackgroundColor: "rgb(0,0,255)",
+              data: xyValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            scales: {
+              xAxes: [{ticks: {min: 40, max:160}}],
+              yAxes: [{ticks: {min: 6, max:16}}],
+            }
+          }
+        });
+        </script>
+
 
 </body>
 </html>

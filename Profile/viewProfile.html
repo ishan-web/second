@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link  href="sms.css" rel="stylesheet">
+    <link  href="viewprofile.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/40ae11a950.js" crossorigin="anonymous"></script>  
 </head>
 <body>
@@ -18,33 +18,36 @@
                     <i class="fa fa-caret-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="../Reports/statement/Statement.html">Balance Statement</a>
+                    <a href="../statement/Statement.html">Balance Statement</a>
                     <a href="../Reports/Transaction/Transaction.html">SMS Report</a>
                   </div>
-                    <a href="#sms"><i class="fa-solid fa-comment-sms"></i>Send SMS</a>
+                    <a href="../Sms/Sms.html"><i class="fa-solid fa-comment-sms"></i>Send SMS</a>
                     <a href="../AddBalance/AddBalance.html"><i class="fa-solid fa-plus"></i>Add Balance</a>
                     <a href="../api/Api.html"><i class="fa-solid fa-link"></i>API</a>
             </div>
         </div>
-        <div class="sms">
-                <h2>Send SMS</h2>
-            <div class="sms_form">
-                <label >Mobile Number</label>
-                <input type="tel" placeholder="phone number" required>
-                <label >Message</label>
-                <textarea type="text" placeholder="Write message" ></textarea>
-                <label >Select File</label>
-                <input type="File" >
-                <input type="submit" class="submit" value="Upload file">
-            </div>    
-            <div class="btn">
-              <input type="submit" class="submit" value="Submit" >
-            </div>
-            </div>
+        <div class="container">
+            <fieldset >
+                <legend style="display:block" >User Profile</legend>      
+                <div class="profile">
+                    <label >Username</label>
+                    <input type="text" value="aBahubali" readonly>
+                    <label >Full Name</label>
+                    <input type="text" value="Amarendra Bahubali" readonly>
+                    <label >Mobile No.</label>
+                    <input type="text" value="9849494949"  readonly>
+                    <label >Email</label>
+                    <input type="text" value="bahubali@gmail.com" readonly>                   
+                </div>   
+                <div class="btn">
+                    <button type="submit" class="submit" ><a href="../Profile/editProfile.html" style="text-decoration: none; ">Edit</a></button>
+                    <button type="submit" class="submit" ><a href="../dashboard/index.html" style="text-decoration: none; ">Back</a></button>
+                  </div>      
+            </fieldset>
         </div>
     </div>
     <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have mdivtiple dropdowns without any conflict */
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var dropdown = document.getElementsByClassName("dropdown-btn");
         var i;
         
@@ -59,6 +62,6 @@
             }
           });
         }
-        </script>  
+        </script>
 </body>
 </html>
